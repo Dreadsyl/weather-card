@@ -1,0 +1,122 @@
+/*-----WEATHER CARD-----*/
+#weather-card {
+  position: relative;
+  width: 420px;
+  margin: 50px auto;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/*WEATHER INFO/FLIP*/
+.weather-info,
+.weather-flip {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 1px 1px 7px #eeeeee;
+  color: #303030;
+  border-radius: 5px;
+
+  position: absolute;
+  transform: rotateX(0deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.weather-info {
+  transform: rotateY(180deg);
+  background-color: #fff;
+}
+.weather-flip {
+  cursor: pointer;
+  background-color: #303030;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/*FLIP*/
+.location-flip {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: -10px;
+}
+.icon-flip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-flip img {
+  filter: drop-shadow(1px 1px #fff);
+}
+
+/*CARD BODY*/
+.logic {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 0.8rem;
+  color: #636363;
+}
+#toggle-unit {
+  cursor: pointer;
+}
+#toggle-unit > span {
+  padding: 1px;
+  border: 1px solid #636363;
+}
+#toggle-unit span:first-child {
+  background-color: #636363;
+  color: #fff;
+}
+
+/*CARD BODY*/
+.card-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 15px 0;
+}
+
+/*CARD MAIN*/
+.card-main {
+  text-align: center;
+}
+.location {
+  font-size: 1.4rem;
+}
+.icon-holder {
+  display: flex;
+  align-items: center;
+}
+.unit {
+  font-size: 1.4rem;
+  margin-left: -10px;
+}
+
+/*CARD INFO*/
+.card-info {
+  text-align: center;
+  padding-left: 5px;
+}
+.day {
+  font-size: 1.4rem;
+}
+.date {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+.info {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 3px 0 0 15px;
+  color: #636363;
+}
+
+@media all and (max-width: 450px) {
+  #weather-card {
+    width: 210px;
+  }
+  .card-body {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+}
